@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test', function () {
+	return view('test');
+});
+
+
 Route::get('/items/items', 'ItemController@index')->name('home');
 Route::resource('items', 'ItemController@index');
 
