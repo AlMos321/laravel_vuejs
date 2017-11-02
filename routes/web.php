@@ -15,14 +15,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function () {
-	return view('test');
+
+Route::get('/homework1', function () {
+	return view('homework1');
 });
 
-
 Route::get('/items/items', 'ItemController@index')->name('home');
-Route::resource('items', 'ItemController@index');
+Route::post('/items', 'ItemController@store');
+Route::get('/items/{items}/edit', 'ItemController@edit');
+Route::patch('/items/{items}', 'ItemController@update');
+
+/*Route::resource('items', 'ItemController');
+
+Route::resource('products', 'ProductController');*/
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/*Route::get('/home', 'HomeController@index')->name('home');*/
+
+Route::get('{path}', function () {
+	return view('welcome');
+})->where( 'path', '([A-z\d-\/_.]+)?' );

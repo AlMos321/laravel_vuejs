@@ -10,20 +10,21 @@
 			display: -webkit-flex;
 			//display: flex;
 			display: inline-flex;
-			width: 400px;
+			width: 800px;
 			height: 250px;
 			background-color: lightgrey;
 			/*direction: rtl;*/
-			flex-direction: column-reverse;
+			flex-direction: row;
 			/*flex-wrap: wrap-reverse;
 			flex-shrink: 1;*/
 		}
 
 		.flex-item {
 			background-color: cornflowerblue;
-			width: 100px;
+			width: 200px;
 			height: 100px;
 			margin: 10px;
+			flex-grow: 2;
 		}
 	</style>
 </head>

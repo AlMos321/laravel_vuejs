@@ -843,8 +843,9 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(9);
-__webpack_require__(51);
-module.exports = __webpack_require__(52);
+__webpack_require__(54);
+__webpack_require__(55);
+module.exports = __webpack_require__(56);
 
 
 /***/ }),
@@ -868,6 +869,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_DisplayItem_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_DisplayItem_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_EditItem_vue__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_EditItem_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_EditItem_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Products_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Products_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_Products_vue__);
 /*
 
 /!**
@@ -910,6 +913,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_2_vue_
 
 
 
+
 var routes = [{
     name: 'CreateItem',
     path: '/items/create',
@@ -922,10 +926,32 @@ var routes = [{
     name: 'EditItem',
     path: '/edit/:id',
     component: __WEBPACK_IMPORTED_MODULE_7__components_EditItem_vue___default.a
+}, {
+    name: 'Products',
+    path: '/products',
+    component: __WEBPACK_IMPORTED_MODULE_8__components_Products_vue___default.a
 }];
 
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({ mode: 'history', routes: routes });
+
 new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_0_vue___default.a.util.extend({ router: router }, __WEBPACK_IMPORTED_MODULE_4__App_vue___default.a)).$mount('#app');
+
+/*Vue.component('main-component', {
+    template: '<div><sub-component>....</sub-component></div>',
+    components: {
+        'sub-component': {  template: '<div> 123 </div>' }
+    }
+});
+
+const app = new Vue({
+    el: '#app'
+});*/
+
+/*some components*/
+/*Vue.component('test_component', require('./components/TestComponent.vue'));
+const app = new Vue({
+    el: '#app'
+});*/
 
 /***/ }),
 /* 10 */
@@ -15191,7 +15217,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
-
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -15887,12 +15912,286 @@ if (false) {
 
 /***/ }),
 /* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(52)
+/* template */
+var __vue_template__ = __webpack_require__(53)
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Products.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] Products.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8ee0714c", Component.options)
+  } else {
+    hotAPI.reload("data-v-8ee0714c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 52 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "container", staticStyle: { "padding-bottom": "40px" } },
+      [
+        _c("h3", { staticStyle: { "text-align": "center" } }, [
+          _vm._v("Топовые продукты")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
+            _c("div", {
+              staticClass: "product",
+              staticStyle: {
+                "background-image":
+                  "url('https://img.makeup.com.ua/products_pictures/f/f8/f8ju7u3zm7xj.jpg')"
+              }
+            }),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary buy-btn" }, [
+              _vm._v("Купить")
+            ])
+          ])
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-8ee0714c", module.exports)
+  }
+}
+
+/***/ }),
+/* 54 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 52 */
+/* 55 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 56 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
