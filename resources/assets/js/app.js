@@ -28,22 +28,21 @@ const app = new Vue({
 // app.js
 
 import Vue from 'vue';
-
-
 import VueRouter from 'vue-router';
-
-Vue.use(VueRouter);
-
 import VueAxios from 'vue-axios';
 import axios from 'axios';
 
 Vue.use(VueAxios, axios);
+Vue.use(VueRouter);
+
+window._ = require('lodash'); // https://forum.vuejs.org/t/--is-not-defined/11947
 
 import App from './App.vue';
 import CreateItem from './components/CreateItem.vue';
 import DisplayItem from './components/DisplayItem.vue';
 import EditItem from './components/EditItem.vue';
 import Products from './components/Products.vue';
+import Login from './components/auth/Login.vue';
 
 const routes = [
     {
@@ -66,21 +65,18 @@ const routes = [
         path: '/products',
         component: Products
     },
+    {
+        name: 'Login',
+        path: '/login',
+        component: Login
+    },
 ];
+
+Vue.component('menu-component', require('./components/Menu.vue'));
 
 const router = new VueRouter({mode: 'history', routes: routes});
 
 new Vue(Vue.util.extend({router}, App)).$mount('#app');
-
-
-/*var router = new VueRouter({
-    mode: 'history',
-    routes: [
-        {path: '/home', name: 'Home', component: Home},
-        {path: '/news', name: 'News', component: News},
-    ]
-});*/
-
 
 
 /*Vue.component('main-component', {

@@ -1,6 +1,7 @@
 
 <template>
     <div class="container">
+        <menu-component></menu-component>
         <div>
             <transition name="fade">
                 <router-view></router-view>

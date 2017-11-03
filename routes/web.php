@@ -29,7 +29,9 @@ Route::patch('/items/{items}', 'ItemController@update');
 
 Route::resource('products', 'ProductController');*/
 
-Auth::routes();
+//Auth::routes();
+Route::post('/login', 'Auth\LoginController@login');
+
 
 /*Route::get('/home', 'HomeController@index')->name('home');*/
 
