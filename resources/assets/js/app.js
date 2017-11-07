@@ -76,7 +76,7 @@ Vue.component('menu-component', require('./components/Menu.vue'));
 
 const router = new VueRouter({mode: 'history', routes: routes});
 
-new Vue(Vue.util.extend({router}, App)).$mount('#app');
+const app = new Vue(Vue.util.extend({router}, App)).$mount('#app');
 
 
 /*Vue.component('main-component', {
